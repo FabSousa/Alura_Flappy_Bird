@@ -7,10 +7,10 @@ public class SpikeSpawner : MonoBehaviour
     [SerializeField] private GameObject spikePrefab;
     [SerializeField] private float minSpawnDelay = 1.5f;
     [SerializeField] private float maxSpawnDelay = 3;
+    [SerializeField] private float minH = -1.5f;
+    [SerializeField] private float maxH = 1;
     private float count = 2;
     private float timeToDestroy = 3;
-    private float minH = -1.8f;
-    private float maxH = 1;
 
     private void Update()
     {
