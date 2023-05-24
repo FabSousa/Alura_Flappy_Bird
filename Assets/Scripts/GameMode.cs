@@ -15,6 +15,7 @@ public class GameMode : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
+        Score.Count = 0;
         uiController.GameOver();
     }
 
