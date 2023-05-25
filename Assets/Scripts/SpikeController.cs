@@ -6,7 +6,7 @@ public class SpikeController : MonoBehaviour
 {
     private UiController uiController;
     private AudioController audioController;
-    [SerializeField][Min(0)] private float speed = 10;
+    [SerializeField][Min(0)] private SharedFloat speed;
 
     private void Awake()
     {
@@ -15,7 +15,7 @@ public class SpikeController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * speed);
+        transform.Translate(Vector3.left * Time.deltaTime * speed.value);
     }
 
     private void OnTriggerExit2D(Collider2D other)

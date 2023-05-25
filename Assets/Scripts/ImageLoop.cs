@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ImageLoop : MonoBehaviour
 {
-    [SerializeField] private float speed = 5;
+    [SerializeField] private SharedFloat speed;
     private Vector3 startPosition;
     private float imageSize;
 
@@ -18,7 +18,7 @@ public class ImageLoop : MonoBehaviour
 
     private void Update()
     {
-        float movment = Mathf.Repeat(speed * Time.time, imageSize);
+        float movment = Mathf.Repeat(speed.value * Time.time, imageSize);
         transform.position = startPosition + Vector3.left * movment;
     }
 }

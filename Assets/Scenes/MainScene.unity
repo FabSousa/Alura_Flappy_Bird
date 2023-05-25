@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213a0af14f099a54fa99cdc6fa1a8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: {fileID: 11400000, guid: cb796b88681919c429cd8fadfb8cfc57, type: 2}
 --- !u!1 &191620409
 GameObject:
   m_ObjectHideFlags: 1
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213a0af14f099a54fa99cdc6fa1a8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: {fileID: 11400000, guid: ecf594c4bf996c54c93d001705d083b7, type: 2}
 --- !u!1 &516819564
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213a0af14f099a54fa99cdc6fa1a8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: {fileID: 11400000, guid: cb796b88681919c429cd8fadfb8cfc57, type: 2}
 --- !u!212 &627868897
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 213a0af14f099a54fa99cdc6fa1a8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: {fileID: 11400000, guid: ecf594c4bf996c54c93d001705d083b7, type: 2}
 --- !u!60 &1838261956
 PolygonCollider2D:
   m_ObjectHideFlags: 0
