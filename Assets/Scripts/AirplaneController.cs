@@ -5,9 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class AirplaneController : MonoBehaviour
 {
-    Rigidbody2D rb;
-    GameMode gm;
-    [SerializeField][Min(0)] float impulseForce = 5;
+    private Rigidbody2D rb;
+    private GameMode gm;
+    [SerializeField][Min(0)] private float impulseForce = 5;
+    private bool doLeap;
 
     private void Awake()
     {
@@ -17,10 +18,18 @@ public class AirplaneController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1")){
-            rb.velocity = Vector2.zero;
-            rb.AddForce(Vector2.up * impulseForce, ForceMode2D.Impulse);
-        }
+        if(Input.GetButtonDown("Fire1")) doLeap = true;
+    }
+
+    private void FixedUpdate()
+    {
+        if(doLeap) Leap();
+    }
+
+    private void Leap(){
+        rb.velocity = Vector2.zero;
+        rb.AddForce(Vector2.up * impulseForce, ForceMode2D.Impulse);
+        doLeap = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
