@@ -7,6 +7,7 @@ public class AirplaneController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private GameMode gm;
+    private Animator animator;
     [SerializeField][Min(0)] private float impulseForce = 5;
     private bool doLeap;
 
@@ -14,11 +15,13 @@ public class AirplaneController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gm = GameObject.FindObjectOfType<GameMode>() as GameMode;
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if(Input.GetButtonDown("Fire1")) doLeap = true;
+        animator.SetFloat(Strings.velocityY, rb.velocity.y);
     }
 
     private void FixedUpdate()
