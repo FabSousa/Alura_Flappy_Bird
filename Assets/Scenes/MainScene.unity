@@ -2014,6 +2014,71 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: maxH
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: minH
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: timeToMaxDifficulty
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: easySpawnDelayRange.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: easySpawnDelayRange.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: hardSpawnDelayRange.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: hardSpawnDelayRange.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: easySpawnDelayRange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: hardSpawnDelayRange.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: easySpawnDelayRange.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: easySpawnDelayRange.Array.data[1]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: hardSpawnDelayRange.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 72816476083560532, guid: 635c2cb60b82c6041b68dcaf3c36d944,
+        type: 3}
+      propertyPath: hardSpawnDelayRange.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 72816476083560533, guid: 635c2cb60b82c6041b68dcaf3c36d944,
         type: 3}
       propertyPath: m_RootOrder
@@ -2083,11 +2148,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2567817347633789436, guid: 0435a411bad26184087c6df588bc2db9,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 2728408444033750275, guid: 0435a411bad26184087c6df588bc2db9,
         type: 3}
       propertyPath: m_RootOrder
@@ -2148,19 +2208,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8272655388634129692, guid: 0435a411bad26184087c6df588bc2db9,
+    - target: {fileID: 2728408444033750286, guid: 0435a411bad26184087c6df588bc2db9,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8272655388634129692, guid: 0435a411bad26184087c6df588bc2db9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8272655388634129692, guid: 0435a411bad26184087c6df588bc2db9,
-        type: 3}
-      propertyPath: m_LocalScale.z
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
