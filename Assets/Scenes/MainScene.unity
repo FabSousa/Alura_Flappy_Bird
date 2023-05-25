@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.95
+  m_fontSize: 41.4
   m_fontSizeBase: 285.3
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -476,8 +476,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04180284, y: 0.5}
   m_AnchorMax: {x: 0.71926767, y: 0.8217461}
-  m_AnchoredPosition: {x: 0.6999817, y: -1.4000015}
-  m_SizeDelta: {x: 0.5623169, y: -0.5585022}
+  m_AnchoredPosition: {x: 0.7000122, y: -0.9997711}
+  m_SizeDelta: {x: -11.6582, y: -0.5585}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &363323133
 MonoBehaviour:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 24
   m_fontSizeBase: 93.51
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -918,6 +918,10 @@ MonoBehaviour:
   GameOverUI: {fileID: 1412544222}
   scoretext: {fileID: 60358985}
   bestScoreText: {fileID: 1504986037}
+  medalSlot: {fileID: 1758419388}
+  bronzeMedal: {fileID: 21300000, guid: b706a073008828d48bbd26b4e0131c18, type: 3}
+  silverMedal: {fileID: 21300000, guid: a7429996e034dc240b6488e8205cebe9, type: 3}
+  goldMedal: {fileID: 21300000, guid: 1f3c056feb40b7949a5c282d68706072, type: 3}
 --- !u!1 &627868894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1455,7 @@ RectTransform:
   m_Children:
   - {fileID: 363323132}
   - {fileID: 1504986036}
+  - {fileID: 1758419387}
   m_Father: {fileID: 1412544223}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.097}
@@ -1667,8 +1672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.04180284, y: 0.086}
   m_AnchorMax: {x: 0.71926767, y: 0.4077461}
-  m_AnchoredPosition: {x: 0.6999817, y: -2}
-  m_SizeDelta: {x: 0.5623169, y: -0.5585022}
+  m_AnchoredPosition: {x: 0.7000122, y: -1.5999985}
+  m_SizeDelta: {x: -11.6582, y: -0.5585}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1504986037
 MonoBehaviour:
@@ -1718,7 +1723,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19.4
+  m_fontSize: 29.5
   m_fontSizeBase: 93.51
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1767,6 +1772,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504986035}
+  m_CullTransparentMesh: 1
+--- !u!1 &1758419386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1758419387}
+  - component: {fileID: 1758419389}
+  - component: {fileID: 1758419388}
+  m_Layer: 5
+  m_Name: MedalImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1758419387
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758419386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1297538243}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.70876664, y: 0.164}
+  m_AnchorMax: {x: 0.95800006, y: 0.8013606}
+  m_AnchoredPosition: {x: 1.0230103, y: 1.4474869}
+  m_SizeDelta: {x: 2.0461006, y: 0.9963989}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1758419388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758419386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b706a073008828d48bbd26b4e0131c18, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1758419389
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758419386}
   m_CullTransparentMesh: 1
 --- !u!1 &1838261953
 GameObject:
