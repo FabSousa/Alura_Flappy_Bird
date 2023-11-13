@@ -18,7 +18,7 @@ public class ImageLoop : MonoBehaviour
 
     private void Update()
     {
-        float movment = Mathf.Repeat(speed.value * Time.time, imageSize);
+        float movment = Mathf.Repeat(speed.value * Time.time, imageSize/2);
         transform.position = startPosition + Vector3.left * movment;
     }
 }

@@ -6,35 +6,49 @@ using UnityEngine.SceneManagement;
 public class GameMode : MonoBehaviour
 {
     [SerializeField] private GameObject clickingHand;
+    [SerializeField] private Rigidbody2D player1Rb;
+    [SerializeField] private GameObject player2;
+     private Rigidbody2D player2Rb;
     private UiController uiController;
-    private Rigidbody2D playerRb;
-    private SpikeSpawner spikeSpawner;
+    private SpikeSpawner[] spikeSpawner;
     private bool isGameStarted = false;
 
-    private void Start()
+    protected virtual void Start()
     {
+        if(player1Rb == null)
+            player1Rb = GameObject.FindObjectOfType<AirplaneController>().GetComponent<Rigidbody2D>();
+        if(player2 != null)
+            player2Rb = player2.GetComponent<Rigidbody2D>();
         uiController = GameObject.FindObjectOfType<UiController>() as UiController;
-        playerRb = GameObject.FindObjectOfType<AirplaneController>().GetComponent<Rigidbody2D>();
-        spikeSpawner = GameObject.FindObjectOfType<SpikeSpawner>() as SpikeSpawner;
+        spikeSpawner = GameObject.FindObjectsOfType<SpikeSpawner>() as SpikeSpawner[];
         FreezeStart();
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Fire1") && !isGameStarted){
-            StartGame();
+    private void FreezeStart(){
+        player1Rb.simulated = false;
+        if(player2Rb != null){
+            player2Rb.simulated = false;
+            player2.GetComponent<AutoLeap>().enabled = false;
+        }
+
+        foreach(SpikeSpawner s in spikeSpawner){
+            s.enabled = false;
         }
     }
 
-    private void FreezeStart(){
-        playerRb.simulated = false;
-        spikeSpawner.enabled = false;
-    }
+    public void StartGame(){
+        if(isGameStarted) return;
 
-    private void StartGame(){
         isGameStarted = true;
-        playerRb.simulated = true;
-        spikeSpawner.enabled = true;
+        player1Rb.simulated = true;
+        if(player2Rb != null){
+            player2Rb.simulated = true;
+            player2.GetComponent<AutoLeap>().enabled = true;
+        }
+        foreach(SpikeSpawner s in spikeSpawner){
+            s.enabled = true;
+        }
+        
         clickingHand.SetActive(false);
     }
 
@@ -48,7 +62,7 @@ public class GameMode : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(Strings.MainScene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
 }

@@ -15,7 +15,7 @@ public class SpikeSpawner : MonoBehaviour
     private float maxSpawnDelay;
     private float difficulty;
     private float count = 2;
-    private float timeToDestroy = 3;
+    private float timeToDestroy = 12;
 
     private void Update()
     {

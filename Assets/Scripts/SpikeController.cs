@@ -7,11 +7,13 @@ public class SpikeController : MonoBehaviour
     private UiController uiController;
     private AudioController audioController;
     [SerializeField][Min(0)] private SharedFloat speed;
+    private MultplayerGameMode multplayerGameMode;
 
-    private void Awake()
+    private void Start()
     {
         uiController = GameObject.FindObjectOfType<UiController>() as UiController;
         audioController = GameObject.FindObjectOfType<AudioController>() as AudioController;
+        multplayerGameMode = GameObject.FindObjectOfType<MultplayerGameMode>() as MultplayerGameMode;
     }
     private void FixedUpdate()
     {
@@ -23,5 +25,8 @@ public class SpikeController : MonoBehaviour
         Score.Count ++;
         uiController.UpdateScore();
         audioController.PlayScoreAudio();
+        if(multplayerGameMode != null){
+            multplayerGameMode.TryToRevive();
+        }
     }
 }
